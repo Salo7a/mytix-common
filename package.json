@@ -1,6 +1,6 @@
 {
   "name": "@as-mytix/common",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.js",
@@ -10,7 +10,7 @@
   "scripts": {
     "watch": "tsc --build --watch",
     "build": "tsc --build --clean",
-    "publish": "npm version patch && npm run build && npm publish"
+    "pub": "npm version patch && npm run build && npm publish"
   },
   "keywords": [],
   "author": "",

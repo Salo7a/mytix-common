@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "watch": "tsc --build --watch",
-    "build": "tsc --build --clean",
+    "build": "tsc",
     "pub": "npm version patch && npm run build && npm publish"
   },
   "keywords": [],

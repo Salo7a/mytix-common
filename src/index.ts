@@ -8,3 +8,5 @@ export * from "./errors/not-found-error";
 export * from "./middlewares/auth";
 export * from "./middlewares/error-handler";
 export * from "./middlewares/validate-request";
+
+export * from "./events";

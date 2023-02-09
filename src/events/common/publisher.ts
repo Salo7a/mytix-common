@@ -1,10 +1,6 @@
-import {Message, Stan} from "node-nats-streaming";
-import Subjects from "./subjects";
+import {Stan} from "node-nats-streaming";
+import {Event} from "./event";
 
-interface Event {
-    subject: Subjects;
-    data: any;
-}
 
 abstract class Publisher<T extends Event> {
     abstract subject: T['subject'];

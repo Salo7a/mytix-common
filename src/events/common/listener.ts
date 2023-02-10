@@ -1,7 +1,7 @@
 import {Message, Stan} from "node-nats-streaming";
 import {Event} from "./event";
 
-abstract class Listener<T extends Event> {
+export abstract class Listener<T extends Event> {
     abstract subject: T['subject'];
     abstract queueGroupName: string;
     private logging: boolean;
@@ -43,5 +43,3 @@ abstract class Listener<T extends Event> {
         }
     }
 }
-
-export default Listener;

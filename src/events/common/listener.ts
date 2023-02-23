@@ -10,7 +10,7 @@ export abstract class Listener<T extends Event> {
 
     abstract onMessage(data: T['data'], msg: Message): void
 
-    constructor(client: Stan, logging: boolean = false) {
+    constructor(client: Stan, logging: boolean = true) {
         this.client = client;
         this.logging = logging;
     }

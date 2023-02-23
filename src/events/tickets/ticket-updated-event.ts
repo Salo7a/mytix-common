@@ -6,7 +6,11 @@ export interface TicketUpdatedEvent {
         id: string,
         title: string,
         type?: string,
+        location?: string,
+        version: number,
         price: number,
-        userId: string
+        userId: string,
+        orderId?: string,
+        updatedAt?: string
     }
 }

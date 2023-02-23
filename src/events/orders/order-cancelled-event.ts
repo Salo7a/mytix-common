@@ -8,6 +8,7 @@ export interface OrderCancelledEvent {
         status: OrderStatus,
         ticket: {
             id: string,
-        }
+        },
+        updatedAt: string
     }
 }

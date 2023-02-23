@@ -5,9 +5,11 @@ import {Event} from "./event";
 export abstract class Publisher<T extends Event> {
     abstract subject: T['subject'];
     private client: Stan;
+    private logging: boolean;
 
-    constructor(client: Stan) {
+    constructor(client: Stan, logging: boolean = true) {
         this.client = client;
+        this.logging = logging;
     }
 
     publish(data: T['data']): Promise<void> {
@@ -16,7 +18,7 @@ export abstract class Publisher<T extends Event> {
                 if (err) {
                     return reject(err);
                 }
-                console.log(`${this.subject} event published`);
+                if (this.logging) console.log(`${this.subject} event published`);
                 resolve()
             });
         })

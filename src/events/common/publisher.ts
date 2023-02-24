@@ -4,8 +4,8 @@ import {Event} from "./event";
 
 export abstract class Publisher<T extends Event> {
     abstract subject: T['subject'];
-    private client: Stan;
-    private logging: boolean;
+    protected client: Stan;
+    protected logging: boolean;
 
     constructor(client: Stan, logging: boolean = true) {
         this.client = client;

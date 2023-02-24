@@ -12,6 +12,7 @@ export interface OrderCreatedEvent {
             id: string,
             price: number
         },
-        createdAt?: string
+        createdAt?: string,
+        version: number
     }
 }

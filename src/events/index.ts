@@ -11,3 +11,6 @@ export * from "./orders/order-created-event";
 export * from "./orders/order-cancelled-event";
 
 export * from "./expiration/expiration-complete-event";
+
+export * from "./payments/payment-created-event";
+
